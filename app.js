@@ -703,14 +703,16 @@ document.getElementById('volunteerEnter').onclick = () => {
   switchTab('home');
 };
 
+// Autenticação Administrador (Senha: Projeto)
 document.getElementById('adminLogin').onsubmit = (e) => {
   e.preventDefault();
   const pass = document.getElementById('adminPassword').value;
-  if (pass === '2026') {
+  if (pass === 'Projeto') {
     showToast('Acesso administrativo concedido!');
     switchTab('admin');
     renderAdminList();
     renderLeadsList();
+    document.getElementById('adminLogin').reset();
   } else {
     showToast('Senha incorreta!');
   }
@@ -721,15 +723,56 @@ document.getElementById('logout').onclick = () => {
   showToast('Sessão encerrada.');
 };
 
+// Compressão de Imagens enviadas via upload para economizar localStorage
+function compressImage(file, callback) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const MAX_WIDTH = 800;
+      const MAX_HEIGHT = 600;
+      let width = img.width;
+      let height = img.height;
+
+      if (width > height) {
+        if (width > MAX_WIDTH) {
+          height *= MAX_WIDTH / width;
+          width = MAX_WIDTH;
+        }
+      } else {
+        if (height > MAX_HEIGHT) {
+          width *= MAX_HEIGHT / height;
+          height = MAX_HEIGHT;
+        }
+      }
+
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, width, height);
+
+      // Comprime para formato JPEG com 75% de qualidade
+      const dataUrl = canvas.toDataURL('image/jpeg', 0.75);
+      callback(dataUrl);
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
 // Cadastro / Edição Admin
 document.getElementById('animalForm').onsubmit = (e) => {
   e.preventDefault();
 
   const id = document.getElementById('animalId').value || Date.now().toString();
   const fileInput = document.getElementById('photo');
-  const photoUrlInput = document.getElementById('photoUrl').value;
+  const photoUrlInput = document.getElementById('photoUrl').value.trim();
 
   function processSave(photoData) {
+    const existingAnimals = getAnimals();
+    const existing = existingAnimals.find(a => a.id === id);
+
     const newAnimal = {
       id,
       name: document.getElementById('name').value,
@@ -740,7 +783,7 @@ document.getElementById('animalForm').onsubmit = (e) => {
       animalAge: document.getElementById('animalAge').value,
       group: document.getElementById('group').value,
       animalEnergy: document.getElementById('animalEnergy').value,
-      photo: photoData || photoUrlInput || 'https://via.placeholder.com/300x200?text=Sem+Foto',
+      photo: photoData || photoUrlInput || (existing ? existing.photo : 'https://via.placeholder.com/300x200?text=Sem+Foto'),
       story: document.getElementById('story').value,
       personality: document.getElementById('personality').value,
       care: document.getElementById('care').value,
@@ -760,18 +803,23 @@ document.getElementById('animalForm').onsubmit = (e) => {
       animals.push(newAnimal);
     }
 
-    saveAnimals(animals);
-    showToast('Animal salvo no catálogo!');
-    document.getElementById('animalForm').reset();
-    document.getElementById('animalId').value = '';
-    renderCatalogs();
-    renderAdminList();
+    try {
+      saveAnimals(animals);
+      showToast('Animal salvo no catálogo!');
+      document.getElementById('animalForm').reset();
+      document.getElementById('animalId').value = '';
+      document.getElementById('formTitle').textContent = 'Cadastrar novo animal';
+      renderCatalogs();
+      renderAdminList();
+    } catch (err) {
+      alert('A imagem é muito grande para salvar no navegador. Tente usar uma URL da foto ou selecione uma imagem menor.');
+    }
   }
 
   if (fileInput.files && fileInput.files[0]) {
-    const reader = new FileReader();
-    reader.onload = (evt) => processSave(evt.target.result);
-    reader.readAsDataURL(fileInput.files[0]);
+    compressImage(fileInput.files[0], (compressedBase64) => {
+      processSave(compressedBase64);
+    });
   } else {
     processSave(null);
   }
@@ -818,6 +866,7 @@ function editAnimal(id) {
   document.getElementById('animalAge').value = animal.animalAge || 'adulto';
   document.getElementById('group').value = animal.group || '';
   document.getElementById('animalEnergy').value = animal.animalEnergy || 'moderado';
+  document.getElementById('photoUrl').value = animal.photo.startsWith('data:') ? '' : animal.photo;
   document.getElementById('story').value = animal.story || '';
   document.getElementById('personality').value = animal.personality || '';
   document.getElementById('care').value = animal.care || '';
