@@ -220,14 +220,14 @@
           <h3>🔑 Administrador</h3>
           <p>Acesso de gerenciamento para cadastrar, editar e excluir animais, além de exportar os dados.</p>
           <form id="adminLogin">
-            <label>Senha de demonstração
-              <input id="adminPassword" type="password" placeholder="Digite a senha (2026)" required>
+            <label>Senha de acesso
+              <input id="adminPassword" type="password" placeholder="Digite sua senha" required>
             </label>
             <button class="primary" type="submit">Entrar como administrador</button>
           </form>
         </article>
       </div>
-      <p class="admin-note">Senha de administrador para testes: <strong>2026</strong></p>
+      <p class="admin-note">Área restrita à equipe de administração do projeto.</p>
     </section>
 
     <!-- Aba 6: Painel Admin (Oculta por padrão) -->
@@ -276,11 +276,12 @@
               <option value="ativo">Ativo / brincalhão</option>
             </select>
           </label>
-          <label class="full">URL da foto do animal
-            <input id="photoUrl" placeholder="Ex.: https://images.unsplash.com/... ou faça upload abaixo">
+          <label class="full">1. URL ou caminho local da foto
+            <input id="photoUrl" placeholder="Ex.: fotos/zeus.jpg ou https://exemplo.com/foto.jpg">
           </label>
-          <label class="full">Ou envie uma foto local
+          <label class="full">2. Ou envie uma foto do dispositivo (computador / celular)
             <input id="photo" type="file" accept="image/*">
+            <small style="font-weight:400; color:#888;">Imagens enviadas são otimizadas e salvas diretamente no navegador.</small>
           </label>
           <label class="full">História<textarea id="story" rows="3" placeholder="Conte a história do animal..."></textarea></label>
           <label class="full">Personalidade<textarea id="personality" rows="2" placeholder="Ex.: Carinhosa, alegre, brincalhona..."></textarea></label>
