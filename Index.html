@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7a8b8">
+  <meta name="description" content="Pacotinhos de Amor — conheça animais e encontre seu novo melhor amigo.">
+  <title>Pacotinhos de Amor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="top">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" rx="30" fill="#F7A8B8"/>
+        <path d="M50 42C38 42 27 52 27 67C27 79 38 87 50 87C62 87 73 79 73 67C73 52 62 42 50 42Z" fill="#FFF8F9"/>
+        <circle cx="28" cy="34" r="10" fill="#FFF8F9"/>
+        <circle cx="43" cy="22" r="10" fill="#FFF8F9"/>
+        <circle cx="57" cy="22" r="10" fill="#FFF8F9"/>
+        <circle cx="72" cy="34" r="10" fill="#FFF8F9"/>
+        <path d="M44 63C44 65.5 46.7 67.5 50 67.5C53.3 67.5 56 65.5 56 63" stroke="#D96F8B" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1>Pacotinhos de Amor</h1>
+        <p>Histórias, cuidados e amor por cada animal.</p>
+      </div>
+    </div>
+    <div class="social">
+      <a href="https://wa.me/5511940436900" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/projeto.pacotinhodeamor/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </header>
+
+  <!-- Navegação por Abas -->
+  <nav class="nav" aria-label="Navegação principal">
+    <button class="nav-btn active" data-page="home">🏠 Início</button>
+    <button class="nav-btn" data-page="dogs">🐶 Cachorros</button>
+    <button class="nav-btn" data-page="cats">🐱 Gatos</button>
+    <button class="nav-btn" data-page="test">💗 Teste de adoção</button>
+    <button class="nav-btn" data-page="access">🔐 Acessos</button>
+  </nav>
+
+  <main>
+    <!-- Aba 1: Início -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <span class="paw">🐾</span>
+        <h2>Encontre um novo melhor amigo!</h2>
+        <p>Conheça os animais do projeto e descubra qual deles combina com sua rotina, seu lar e seu coração.</p>
+        <div class="hero-actions">
+          <button class="primary" data-go="dogs">Conhecer cachorros</button>
+          <button class="secondary" data-go="cats">Conhecer gatos</button>
+          <button class="primary" data-go="test">Fazer teste de compatibilidade</button>
+        </div>
+      </div>
+
+      <div class="search-wrap">
+        <label for="search">Encontre um animal pelo nome</label>
+        <div class="search-line">
+          <input id="search" type="search" placeholder="Digite o nome do animal..." autocomplete="off">
+          <button id="clearSearch" aria-label="Limpar pesquisa">×</button>
+        </div>
+        <div id="searchResults" class="grid"></div>
+      </div>
+
+      <div class="counts">
+        <button class="count-card" data-go="dogs">
+          <span>🐶</span>
+          <strong id="dogCount">0</strong>
+          <small>cachorros</small>
+        </button>
+        <button class="count-card" data-go="cats">
+          <span>🐱</span>
+          <strong id="catCount">0</strong>
+          <small>gatos</small>
+        </button>
+      </div>
+    </section>
+
+    <!-- Aba 2: Cachorros -->
+    <section id="dogs" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Conheça nossos</p>
+          <h2>🐶 Cachorros</h2>
+        </div>
+        <span id="dogsTotal" class="total">0 animais</span>
+      </div>
+      <div id="dogsGrid" class="grid"></div>
+      <p id="dogsEmpty" class="empty">Ainda não há cachorros cadastrados. 💗</p>
+    </section>
+
+    <!-- Aba 3: Gatos -->
+    <section id="cats" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Conheça nossos</p>
+          <h2>🐱 Gatos</h2>
+        </div>
+        <span id="catsTotal" class="total">0 animais</span>
+      </div>
+      <div id="catsGrid" class="grid"></div>
+      <p id="catsEmpty" class="empty">Ainda não há gatos cadastrados. 💗</p>
+    </section>
+
+    <!-- Aba 4: Teste de Adoção -->
+    <section id="test" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Um encontro que pode mudar duas vidas</p>
+          <h2>Teste de compatibilidade</h2>
+        </div>
+      </div>
+      <p class="intro">Responda às perguntas para encontrar animais que combinam com seu estilo de vida. O resultado aparece na hora e é uma orientação inicial — a equipe conversa com você antes de qualquer adoção.</p>
+      
+      <form id="matchForm" class="form-card">
+        <div class="form-grid">
+          <label>1. Qual espécie você prefere? *
+            <select id="prefSpecies" required>
+              <option value="">Selecione</option>
+              <option value="cachorro">🐶 Cachorro</option>
+              <option value="gato">🐱 Gato</option>
+              <option value="ambos">❤️ Não tenho preferência</option>
+            </select>
+          </label>
+
+          <label>2. Como é sua moradia? *
+            <select id="homeType" required>
+              <option value="">Selecione</option>
+              <option value="casa quintal">Casa com quintal</option>
+              <option value="casa sem quintal">Casa sem quintal</option>
+              <option value="apartamento">Apartamento</option>
+            </select>
+          </label>
+
+          <label>3. Quanto tempo por dia pode dedicar ao animal? *
+            <select id="time" required>
+              <option value="">Selecione</option>
+              <option value="alto">A maior parte do dia</option>
+              <option value="medio">Algumas horas por dia</option>
+              <option value="baixo">Pouco tempo durante o dia</option>
+            </select>
+          </label>
+
+          <label>4. Já existem outros animais na casa? *
+            <select id="otherPets" required>
+              <option value="">Selecione</option>
+              <option value="nenhum">Não</option>
+              <option value="cachorro">Sim, cachorro(s)</option>
+              <option value="gato">Sim, gato(s)</option>
+              <option value="ambos">Sim, cães e gatos</option>
+            </select>
+          </label>
+
+          <label>5. Há crianças na residência? *
+            <select id="children" required>
+              <option value="">Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </label>
+
+          <label>6. Qual faixa etária prefere? *
+            <select id="agePref" required>
+              <option value="">Selecione</option>
+              <option value="filhote">Filhote</option>
+              <option value="adulto">Adulto</option>
+              <option value="idoso">Idoso</option>
+              <option value="qualquer">Sem preferência</option>
+            </select>
+          </label>
+
+          <label>7. Qual nível de energia combina com sua rotina? *
+            <select id="energy" required>
+              <option value="">Selecione</option>
+              <option value="calmo">Calmo</option>
+              <option value="moderado">Moderado</option>
+              <option value="ativo">Ativo / brincalhão</option>
+              <option value="qualquer">Qualquer perfil</option>
+            </select>
+          </label>
+
+          <label>8. Você aceita animais que precisam de cuidados especiais? *
+            <select id="special" required>
+              <option value="">Selecione</option>
+              <option value="sim">Sim, posso oferecer cuidados extras</option>
+              <option value="nao">Prefiro um animal sem cuidados especiais</option>
+              <option value="conversar">Depende das necessidades</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="primary" type="submit">Ver meus resultados 💗</button>
+          <button class="secondary" type="reset" id="resetMatch">Limpar respostas</button>
+        </div>
+      </form>
+
+      <div id="matchResults" class="match-results" aria-live="polite"></div>
+    </section>
+
+    <!-- Aba 5: Acessos -->
+    <section id="access" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Área da equipe</p>
+          <h2>Acessos</h2>
+        </div>
+      </div>
+      <div class="access-grid">
+        <article class="access-card">
+          <h3>🙋 Voluntários</h3>
+          <p>Consulte os animais cadastrados e suas informações. Esta área não permite editar ou excluir cadastros.</p>
+          <button class="secondary" id="volunteerEnter">Entrar como voluntário</button>
+        </article>
+
+        <article class="access-card">
+          <h3>🔑 Administrador</h3>
+          <p>Acesso de gerenciamento para cadastrar, editar e excluir animais, além de exportar os dados.</p>
+          <form id="adminLogin">
+            <label>Senha de demonstração
+              <input id="adminPassword" type="password" placeholder="Digite a senha (2026)" required>
+            </label>
+            <button class="primary" type="submit">Entrar como administrador</button>
+          </form>
+        </article>
+      </div>
+      <p class="admin-note">Senha de administrador para testes: <strong>2026</strong></p>
+    </section>
+
+    <!-- Aba 6: Painel Admin (Oculta por padrão) -->
+    <section id="admin" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Acesso de administrador</p>
+          <h2>Gerenciar animais</h2>
+        </div>
+        <button class="secondary" id="logout">Sair</button>
+      </div>
+
+      <form id="animalForm" class="form-card">
+        <h3 id="formTitle">Cadastrar novo animal</h3>
+        <input type="hidden" id="animalId">
+        <div class="form-grid">
+          <label>Nome do animal *<input id="name" required maxlength="60" placeholder="Ex.: Mel"></label>
+          <label>Espécie *
+            <select id="species" required>
+              <option value="cachorro">Cachorro</option>
+              <option value="gato">Gato</option>
+            </select>
+          </label>
+          <label>Idade<input id="age" maxlength="50" placeholder="Ex.: 3 anos"></label>
+          <label>Sexo<input id="sex" placeholder="Ex.: Fêmea"></label>
+          <label>Porte
+            <select id="size">
+              <option value="qualquer">Não informado</option>
+              <option value="pequeno">Pequeno</option>
+              <option value="medio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+          </label>
+          <label>Faixa etária
+            <select id="animalAge">
+              <option value="adulto">Adulto</option>
+              <option value="filhote">Filhote</option>
+              <option value="idoso">Idoso</option>
+            </select>
+          </label>
+          <label>Ninhada / grupo<input id="group" maxlength="80" placeholder="Ex.: Resgatados de SP"></label>
+          <label>Energia
+            <select id="animalEnergy">
+              <option value="moderado">Moderado</option>
+              <option value="calmo">Calmo</option>
+              <option value="ativo">Ativo / brincalhão</option>
+            </select>
+          </label>
+          <label class="full">URL da foto do animal
+            <input id="photoUrl" placeholder="Ex.: https://images.unsplash.com/... ou faça upload abaixo">
+          </label>
+          <label class="full">Ou envie uma foto local
+            <input id="photo" type="file" accept="image/*">
+          </label>
+          <label class="full">História<textarea id="story" rows="3" placeholder="Conte a história do animal..."></textarea></label>
+          <label class="full">Personalidade<textarea id="personality" rows="2" placeholder="Ex.: Carinhosa, alegre, brincalhona..."></textarea></label>
+          <label class="full">Cuidados e necessidades<textarea id="care" rows="3" placeholder="Descreva cuidados e necessidades..."></textarea></label>
+          <label class="full">Informações importantes<textarea id="info" rows="2" placeholder="Vacinas, castração ou restrições..."></textarea></label>
+          <label>Convive bem com cães?
+            <select id="dogsOk">
+              <option value="sim">Sim</option>
+              <option value="nao">Não / não testado</option>
+              <option value="desconhecido">Não informado</option>
+            </select>
+          </label>
+          <label>Convive bem com gatos?
+            <select id="catsOk">
+              <option value="sim">Sim</option>
+              <option value="nao">Não / não testado</option>
+              <option value="desconhecido">Não informado</option>
+            </select>
+          </label>
+          <label>Convive bem com crianças?
+            <select id="kidsOk">
+              <option value="sim">Sim</option>
+              <option value="nao">Não / não testado</option>
+              <option value="desconhecido">Não informado</option>
+            </select>
+          </label>
+          <label>Precisa de cuidados especiais?
+            <select id="specialCare">
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </label>
+          <label class="full">Tipo de moradia indicado
+            <select id="homeSuitable">
+              <option value="qualquer">Qualquer moradia (avaliar individualmente)</option>
+              <option value="casa quintal">Casa com quintal</option>
+              <option value="casa sem quintal">Casa sem quintal</option>
+              <option value="apartamento">Apartamento</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button class="primary" type="submit">Salvar animal</button>
+          <button class="secondary" type="button" id="cancelEdit">Limpar formulário</button>
+        </div>
+      </form>
+
+      <div class="backup-row">
+        <button class="secondary" id="exportData">⬇ Exportar backup (JSON)</button>
+        <label class="file-button">⬆ Importar backup
+          <input type="file" id="importData" accept="application/json">
+        </label>
+      </div>
+
+      <h3 class="list-title">Animais cadastrados</h3>
+      <div id="adminList" class="admin-list"></div>
+
+      <h3 class="list-title">Interesses registrados neste navegador</h3>
+      <div id="leadsList" class="admin-list"></div>
+    </section>
+
+    <!-- Aba 7: Perfil do Animal (Oculta por padrão) -->
+    <section id="profile" class="page">
+      <button class="back" id="backFromProfile">← Voltar</button>
+      <article id="profileContent" class="profile-card"></article>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Pacotinhos de Amor 🐾</strong>
+    <p>Cada história merece ser conhecida.</p>
+    <p>
+      WhatsApp: <a href="https://wa.me/5511940436900" target="_blank" rel="noopener">(11) 94043-6900</a> · 
+      Instagram: <a href="https://www.instagram.com/projeto.pacotinhodeamor/" target="_blank" rel="noopener">@projeto.pacotinhodeamor</a>
+    </p>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
