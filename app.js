@@ -1,62 +1,443 @@
-// Banco de dados inicial pré-carregado
+// Banco de Dados oficial atualizado com o Portfólio de Animais do Projeto Pacotinho de Amor
 const initialAnimals = [
+  // --- CACHORROS ---
   {
-    id: '1',
-    name: 'Mel',
+    id: 'julinho',
+    name: 'Julinho',
     species: 'cachorro',
-    age: '2 anos',
-    sex: 'Fêmea',
+    age: '1 ano',
+    sex: 'Macho',
     size: 'medio',
     animalAge: 'adulto',
-    group: 'Resgatados de SP',
-    animalEnergy: 'ativo',
+    group: 'Chácara Santo Antônio',
+    animalEnergy: 'moderado',
     photo: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80',
-    story: 'Mel foi encontrada vagando perto de um parque. É uma cadelinha extremamente dócil e alegre.',
-    personality: 'Carinhosa, brincalhona, ama correr ao ar livre e faz amizade rápido.',
-    care: 'Precisa de passeios diários para gastar energia.',
-    info: 'Vacinada, castrada e vermifugada.',
+    story: 'Julinho foi encontrado no estacionamento de uma farmácia na Chácara Santo Antônio, sozinho e precisando de ajuda. Hoje está seguro e aguarda uma família responsável.',
+    personality: 'Carinhoso, dócil e muito sociável.',
+    care: 'Passeios regulares e carinho.',
+    info: 'Vacinado, Vermifugado, Castrado.',
     dogsOk: 'sim',
-    catsOk: 'sim',
-    kidsOk: 'sim',
-    specialCare: 'nao',
-    homeSuitable: 'casa quintal'
-  },
-  {
-    id: '2',
-    name: 'Thor',
-    species: 'cachorro',
-    age: '4 anos',
-    sex: 'Macho',
-    size: 'grande',
-    animalAge: 'adulto',
-    group: 'Resgatados de SP',
-    animalEnergy: 'calmo',
-    photo: 'https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80',
-    story: 'Thor é um urso carinhoso. Apesar do tamanho, é super tranquilo e ama dormir aos pés do tutor.',
-    personality: 'Calmo, protetor, companheiro e muito pacífico.',
-    care: 'Gosta de caminhadas leves e de um cantinho macio para descansar.',
-    info: 'Castrado e com vacinas em dia.',
-    dogsOk: 'sim',
-    catsOk: 'nao',
+    catsOk: 'desconhecido',
     kidsOk: 'sim',
     specialCare: 'nao',
     homeSuitable: 'qualquer'
   },
   {
-    id: '3',
-    name: 'Pipoca',
-    species: 'gato',
+    id: 'zeus',
+    name: 'Zeus',
+    species: 'cachorro',
+    age: '3 anos',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Resgatados do Embu',
+    animalEnergy: 'calmo',
+    photo: 'https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80',
+    story: 'Zeus viveu meses em uma casa abandonada no Embu após a morte de sua tutora. Ficava preso num quintal cheio de lixo e sofria agressões. No abrigo, cuidava até dos filhotes que chegavam.',
+    personality: 'Um verdadeiro sonho de cachorro caramelo! Alegre, carinhoso, da lambeijos e muito sociável.',
+    care: 'Tranquilo na guia, ama passear e ficar pertinho.',
+    info: 'Castrado, Vacinado, Vermifugado.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'belo',
+    name: 'Belo',
+    species: 'cachorro',
+    age: '2/3 anos',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Resgatados do Grajaú',
+    animalEnergy: 'calmo',
+    photo: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80',
+    story: 'Resgatado no Grajaú após vagar por dias sozinho pedindo atenção e comida. Passou por todos os exames (parvovirose, cinomose, giárdia, carrapato), todos negativos.',
+    personality: 'Extremamente tranquilo, amoroso e muito "zen".',
+    care: 'Muito adaptável, não demonstra incômodo em lares temporários.',
+    info: 'Vacinado, Vermifugado, Castrado. Exames 100% ok.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'bruno',
+    name: 'Bruno',
+    species: 'cachorro',
+    age: '3/4 anos',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Jardim Robru / Zona Leste',
+    animalEnergy: 'moderado',
+    photo: 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=600&q=80',
+    story: 'Resgatado no extremo leste com ferimentos na orelha e pescoço por possíveis maus-tratos. Esteve internado para tratamento de miíase e se recuperou totalmente.',
+    personality: 'Apesar do sofrimento passado, é super dócil, alegre, quase não late e não destrói objetos. Ama andar de carro sem enjoar.',
+    care: 'Apenas carinho e convivência familiar.',
+    info: 'Castrado, Vacinado, Vermifugado.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'olivia',
+    name: 'Olívia (Mamãe)',
+    species: 'cachorro',
+    age: '2 anos',
+    sex: 'Fêmea',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Família Olívia',
+    animalEnergy: 'calmo',
+    photo: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=80',
+    story: 'Olívia foi encontrada nas ruas protegendo seus filhotes (Oscar e Oceane). Agora está segura e pronta para um lar definitivo.',
+    personality: 'Mãe protetora, meiga, paciente e companheira.',
+    care: 'Atenção e espaço confortável.',
+    info: 'Castrada, Vacinada, Vermifugada.',
+    dogsOk: 'sim',
+    catsOk: 'desconhecido',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'oscar',
+    name: 'Oscar (Filhote da Olívia)',
+    species: 'cachorro',
+    age: '2 meses',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'filhote',
+    group: 'Família Olívia',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&w=600&q=80',
+    story: 'Filhote da Olívia. Possui uma limitação/sequela em uma das patinhas, mas leva uma vida normal, feliz e ativa!',
+    personality: 'Super brincalhão, superador e amoroso. [STATUS: ADOTADO]',
+    care: 'Acompanhamento de desenvolvimento da patinha.',
+    info: 'Vacinado, Vermifugado.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'sim',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'ziggy',
+    name: 'Ziggy',
+    species: 'cachorro',
+    age: '8 meses',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'filhote',
+    group: 'Ninhada da Barriguinha',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80',
+    story: 'Ziggy e Floquinho foram resgatados ainda na barriga da mamãe e esperam por um lar cheio de amor desde o nascimento.',
+    personality: 'Jovem, animado e cheio de energia para brincar.',
+    care: 'Gasta bastante energia em brincadeiras.',
+    info: '8 meses - Castrado, Vacinado, Vermifugado.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'floquinho',
+    name: 'Floquinho',
+    species: 'cachorro',
+    age: '8 meses',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'filhote',
+    group: 'Ninhada da Barriguinha',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=600&q=80',
+    story: 'Irmão do Ziggy, resgatado antes mesmo de nascer. Espera uma família amorosa.',
+    personality: 'Carinhoso, esperto e dócil.',
+    care: 'Rotina de exercícios e passeios.',
+    info: '8 meses - Castrado, Vacinado, Vermifugado.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'julie',
+    name: 'Julie',
+    species: 'cachorro',
+    age: '2 anos',
+    sex: 'Fêmea',
+    size: 'grande',
+    animalAge: 'adulto',
+    group: 'Resgatados de SP',
+    animalEnergy: 'calmo',
+    photo: 'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=600&q=80',
+    story: 'Foi abandonada durante o cio, atropelada e enfrentou uma infecção grave. Foi 100% reabilitada sem perder sua doçura.',
+    personality: 'Resiliente, doce, meiga e gratificante.',
+    care: 'Necessita de carinho e proteção constante.',
+    info: 'Vacinada, Castrada, Porte Médio/Grande.',
+    dogsOk: 'sim',
+    catsOk: 'desconhecido',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'casa quintal'
+  },
+  {
+    id: 'daniel',
+    name: 'Daniel',
+    species: 'cachorro',
+    age: '2 anos',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Resgatados de SP',
+    animalEnergy: 'moderado',
+    photo: 'https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?auto=format&fit=crop&w=600&q=80',
+    story: 'Daniel foi encontrado sozinho em frente a uma farmácia. Agora está seguro e busca uma família para sempre.',
+    personality: 'Companheiro, leal e simpático.',
+    care: 'Passeios diários.',
+    info: 'Castrado, Vacinado, Vermifugado.',
+    dogsOk: 'sim',
+    catsOk: 'desconhecido',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'canela',
+    name: 'Canela',
+    species: 'cachorro',
+    age: '3/4 anos',
+    sex: 'Fêmea',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Resgatados de SP',
+    animalEnergy: 'calmo',
+    photo: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80',
+    story: 'Sofreu uma facada quando filhote. Viveu anos sob proteção de pessoas comunitárias na rua. Quando eles mudaram, Canela foi resgatada para não ficar desamparada.',
+    personality: 'Forte, dócil, paciente e muito amorosa.',
+    care: 'Um lar amoroso onde se sinta protegida.',
+    info: 'Vacinada, Vermifugada, Castrada.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'nutella',
+    name: 'Nutella',
+    species: 'cachorro',
+    age: '3 anos',
+    sex: 'Fêmea',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Resgatados de SP',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1554692998-0d25f324b051?auto=format&fit=crop&w=600&q=80',
+    story: 'Foi adotada apenas para ser brinquedo de criança quando filhote. Ao crescer, foi deixada no quintal sem comida e foi resgatada.',
+    personality: 'Forte, carinhosa, alegre e expressiva.',
+    care: 'Dedicada e com espaço para brincar.',
+    info: 'Castrada, Vacinada, Vermifugada.',
+    dogsOk: 'sim',
+    catsOk: 'desconhecido',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'casa quintal'
+  },
+  {
+    id: 'nicky',
+    name: 'Nicky',
+    species: 'cachorro',
+    age: '1 ano',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Resgatados de SP',
+    animalEnergy: 'moderado',
+    photo: 'https://images.unsplash.com/photo-1534361960057-19889db9875e?auto=format&fit=crop&w=600&q=80',
+    story: 'Nicky foi resgatado ainda na barriga da mamãe e espera por sua oportunidade de ter uma família própria.',
+    personality: 'Muito carinhoso e ansioso por um lar.',
+    care: 'Atenção e caminhadas.',
+    info: 'Vacinado, Vermifugado, Castrado.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'luma',
+    name: 'Luma',
+    species: 'cachorro',
+    age: '6 meses',
+    sex: 'Fêmea',
+    size: 'pequeno',
+    animalAge: 'filhote',
+    group: 'Resgatados de SP',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    story: 'Luma foi abandonada pelos seus antigos tutores quando se mudaram e decidiram deixá-la para trás.',
+    personality: 'Alegre, brincalhona, carinhosa e adora dar lambeijos!',
+    care: 'Atenção de filhote e brincadeiras.',
+    info: 'Castrada, Vacinada, Vermifugada.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'bebe',
+    name: 'Bebê',
+    species: 'cachorro',
     age: '1 ano',
     sex: 'Fêmea',
     size: 'pequeno',
     animalAge: 'adulto',
-    group: 'Ninhada Felina',
+    group: 'Resgatados de SP',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80',
+    story: 'Foi resgatada em um dia chuvoso, encolhida e com fome. Hoje aprendeu truques como sentar e deitar e ama brincar de bolinha!',
+    personality: 'Muito inteligente, dócil e dedicada.',
+    care: 'Ainda aprendendo a passear na guia.',
+    info: 'Castrada, Vacinada, Vermifugada. Porte Pequeno/Médio.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'revoada',
+    name: 'Revoada',
+    species: 'cachorro',
+    age: '2 anos',
+    sex: 'Fêmea',
+    size: 'pequeno',
+    animalAge: 'adulto',
+    group: 'Resgatados de SP',
+    animalEnergy: 'calmo',
+    photo: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=600&q=80',
+    story: 'Era deixada solta na rua por tutores irresponsáveis até ser abandonada. Foi acolhida por uma vizinha protetora.',
+    personality: 'Meiga, carinhosa, sociável com cães, crianças e tolera gatos.',
+    care: 'Amor e segurança.',
+    info: 'Castrada, Vacinada, Vermifugada. Porte Pequeno.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'pipoca-cao',
+    name: 'Pipoca',
+    species: 'cachorro',
+    age: '2 anos',
+    sex: 'Fêmea',
+    size: 'medio',
+    animalAge: 'adulto',
+    group: 'Terminal Guarapiranga / ZS',
+    animalEnergy: 'calmo',
+    photo: 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=600&q=80',
+    story: 'Encontrada vagando perto do Terminal Guarapiranga. Ficou 3 dias na rua até ser resgatada machucada. Totalmente reabilitada.',
+    personality: 'Tranquila nos passeios (não puxa a guia), dócil e aceita outros cães. (Tem um pouco de receio de motos).',
+    care: 'Passeios calmos.',
+    info: 'Castrada, Vacinada, Vermifugada.',
+    dogsOk: 'sim',
+    catsOk: 'desconhecido',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'susi',
+    name: 'Susi',
+    species: 'cachorro',
+    age: '45 dias',
+    sex: 'Fêmea',
+    size: 'medio',
+    animalAge: 'filhote',
+    group: 'Ninhada Teatro Bela Vista',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&w=600&q=80',
+    story: 'A mamãe deu à luz no depósito do Teatro Escola na Bela Vista. Os filhotes foram acolhidos com segurança.',
+    personality: 'Filhotinha delicada, curiosa e brincalhona.',
+    care: 'Cuidados básicos de filhote.',
+    info: '45 dias - Vacinados e Vermifugados.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'tico',
+    name: 'Tico',
+    species: 'cachorro',
+    age: '45 dias',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'filhote',
+    group: 'Ninhada Teatro Bela Vista',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80',
+    story: 'Irmão de Susi e Teco, resgatado do depósito do Teatro na Bela Vista.',
+    personality: 'Esperto e brincalhão.',
+    care: 'Vacinação de filhote em andamento.',
+    info: '45 dias - Vacinado e Vermifugado.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+  {
+    id: 'teco',
+    name: 'Teco',
+    species: 'cachorro',
+    age: '45 dias',
+    sex: 'Macho',
+    size: 'medio',
+    animalAge: 'filhote',
+    group: 'Ninhada Teatro Bela Vista',
+    animalEnergy: 'ativo',
+    photo: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=600&q=80',
+    story: 'Irmão de Susi e Tico, resgatado no galpão do Teatro Escola.',
+    personality: 'Manhoso e carinhoso.',
+    care: 'Vacinação de filhote em andamento.',
+    info: '45 dias - Vacinado e Vermifugado.',
+    dogsOk: 'sim',
+    catsOk: 'sim',
+    kidsOk: 'sim',
+    specialCare: 'nao',
+    homeSuitable: 'qualquer'
+  },
+
+  // --- GATOS ---
+  {
+    id: 'torrada',
+    name: 'Torrada',
+    species: 'gato',
+    age: '3 meses',
+    sex: 'Fêmea',
+    size: 'pequeno',
+    animalAge: 'filhote',
+    group: 'Resgatadas em São Mateus',
     animalEnergy: 'ativo',
     photo: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80',
-    story: 'Pipoca é uma gatinha resgatada ainda filhote. Adora perseguir bolinhas de papel e escalar arranhadores.',
-    personality: 'Curiosa, esperta, companheira e brincalhona.',
-    care: 'Moradia precisa ter redes de proteção nas janelas.',
-    info: 'Castrada, testada FIV/FELV negativa.',
+    story: 'Torrada e Manteiga foram abandonadas juntas em São Mateus e salvas pela equipe do projeto.',
+    personality: 'Curiosa, meiga e brincalhona.',
+    care: 'EXIGÊNCIA: Lar 100% telado e sem rota de fuga.',
+    info: '3 meses - Vacinada, Vermifugada.',
     dogsOk: 'sim',
     catsOk: 'sim',
     kidsOk: 'sim',
@@ -64,29 +445,29 @@ const initialAnimals = [
     homeSuitable: 'apartamento'
   },
   {
-    id: '4',
-    name: 'Oliver',
+    id: 'manteiga',
+    name: 'Manteiga',
     species: 'gato',
-    age: '5 meses',
-    sex: 'Macho',
+    age: '3 meses',
+    sex: 'Fêmea',
     size: 'pequeno',
     animalAge: 'filhote',
-    group: 'Ninhada Sol',
+    group: 'Resgatadas em São Mateus',
     animalEnergy: 'ativo',
     photo: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80',
-    story: 'Oliver é um filhotinho dócil e extremamente manhoso. Adora ronronar no colo.',
-    personality: 'Manhoso, afetuoso e companheiro.',
-    care: 'Requer atenção e brinquedos interativos.',
-    info: 'Primeira dose da vacina aplicada.',
+    story: 'Irmã da Torrada, resgatada em São Mateus. [STATUS: ADOTADA!]',
+    personality: 'Muito manhosa e carinhosa.',
+    care: 'EXIGÊNCIA: Lar 100% telado.',
+    info: '3 meses - Vacinada, Vermifugada. [ADOTADA]',
     dogsOk: 'sim',
     catsOk: 'sim',
     kidsOk: 'sim',
     specialCare: 'nao',
-    homeSuitable: 'qualquer'
+    homeSuitable: 'apartamento'
   }
 ];
 
-// Gerenciamento de Estado
+// Gerenciamento do Armazenamento Local
 function getAnimals() {
   const data = localStorage.getItem('pacotinhos_animals');
   return data ? JSON.parse(data) : initialAnimals;
@@ -107,7 +488,7 @@ function saveLead(lead) {
   localStorage.setItem('pacotinhos_leads', JSON.stringify(leads));
 }
 
-// Navegação entre Abas
+// Navegação por Abas
 document.querySelectorAll('.nav-btn, [data-go]').forEach(btn => {
   btn.addEventListener('click', () => {
     const target = btn.dataset.page || btn.dataset.go;
@@ -132,7 +513,7 @@ function switchTab(pageId) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Renderização dos Catálogos
+// Renderizar Catálogos de Cães e Gatos
 function renderCatalogs() {
   const animals = getAnimals();
 
@@ -167,8 +548,8 @@ function renderGrid(gridId, emptyId, list) {
       <img src="${animal.photo || 'https://via.placeholder.com/300x200?text=Sem+Foto'}" alt="${animal.name}">
       <div class="card-body">
         <h3>${animal.name}</h3>
-        <p>${animal.sex || 'Sexo não informado'} · ${animal.age || 'Idade não informada'}</p>
-        <p><strong>Porte:</strong> ${animal.size || 'Não informado'}</p>
+        <p>${animal.sex || 'Sexo n/i'} · ${animal.age || 'Idade n/i'}</p>
+        <p><strong>Porte:</strong> ${animal.size || 'Médio'}</p>
       </div>
     `;
     grid.appendChild(card);
@@ -187,7 +568,8 @@ document.getElementById('search').addEventListener('input', (e) => {
   const filtered = animals.filter(a => 
     a.name.toLowerCase().includes(query) || 
     (a.personality && a.personality.toLowerCase().includes(query)) ||
-    (a.group && a.group.toLowerCase().includes(query))
+    (a.group && a.group.toLowerCase().includes(query)) ||
+    (a.story && a.story.toLowerCase().includes(query))
   );
 
   if (filtered.length === 0) {
@@ -215,7 +597,7 @@ document.getElementById('clearSearch').onclick = () => {
   document.getElementById('searchResults').innerHTML = '';
 };
 
-// Página de Perfil do Animal
+// Abrir Perfil do Animal
 function openProfile(id) {
   const animals = getAnimals();
   const animal = animals.find(a => a.id === id);
@@ -226,19 +608,19 @@ function openProfile(id) {
     <img src="${animal.photo || 'https://via.placeholder.com/600x400?text=Sem+Foto'}" alt="${animal.name}">
     <div class="profile-inner">
       <h2>${animal.name}</h2>
-      <p class="profile-meta">${animal.species.toUpperCase()} · ${animal.sex || 'Sexo n/i'} · ${animal.age || 'Idade n/i'} · Porte ${animal.size || 'n/i'}</p>
+      <p class="profile-meta">${animal.species.toUpperCase()} · ${animal.sex || 'n/i'} · ${animal.age || 'n/i'} · Porte ${animal.size || 'Médio'}</p>
       
-      <h3>História</h3>
+      <h3>História do Pacotinho</h3>
       <p>${animal.story || 'História não informada.'}</p>
       
       <h3>Personalidade</h3>
       <p>${animal.personality || 'Não informada.'}</p>
 
-      <h3>Cuidados e Necessidades</h3>
+      <h3>Cuidados e Requisitos</h3>
       <p>${animal.care || 'Sem cuidados especiais relatados.'}</p>
 
-      <h3>Informações de Saúde / Vacinação</h3>
-      <p>${animal.info || 'Não informadas.'}</p>
+      <h3>Informações de Saúde</h3>
+      <p>${animal.info || 'Vacinado/Vermifugado.'}</p>
 
       <button class="primary interest-btn" onclick="registerInterest('${animal.name}')">
         💗 Tenho interesse em adotar o(a) ${animal.name}
@@ -253,15 +635,15 @@ document.getElementById('backFromProfile').onclick = () => switchTab('home');
 
 function registerInterest(animalName) {
   saveLead({ animal: animalName });
-  showToast(`Interesse em ${animalName} registrado! Redirecionando para o WhatsApp...`);
+  showToast(`Interesse em ${animalName} registrado! Abrindo o WhatsApp...`);
   
-  const text = encodeURIComponent(`Olá! Gostaria de mais informações sobre o processo de adoção do(a) ${animalName}.`);
+  const text = encodeURIComponent(`Olá! Vi o(a) ${animalName} no catálogo do Projeto Pacotinho de Amor e gostaria de saber mais sobre a adoção.`);
   setTimeout(() => {
     window.open(`https://wa.me/5511940436900?text=${text}`, '_blank');
   }, 1200);
 }
 
-// Teste de Compatibilidade
+// Algoritmo do Teste de Compatibilidade
 document.getElementById('matchForm').onsubmit = (e) => {
   e.preventDefault();
   const prefSpecies = document.getElementById('prefSpecies').value;
@@ -273,7 +655,7 @@ document.getElementById('matchForm').onsubmit = (e) => {
 
   const animals = getAnimals();
   const resultsContainer = document.getElementById('matchResults');
-  resultsContainer.innerHTML = '<h3>Seus melhores matches:</h3>';
+  resultsContainer.innerHTML = '<h3>Seus melhores matches no projeto:</h3>';
 
   let matches = animals.map(animal => {
     let score = 50;
@@ -298,7 +680,7 @@ document.getElementById('matchForm').onsubmit = (e) => {
 
   matches.sort((a, b) => b.score - a.score);
 
-  matches.forEach(m => {
+  matches.slice(0, 6).forEach(m => {
     const card = document.createElement('article');
     card.className = 'result-card';
     card.innerHTML = `
@@ -315,9 +697,9 @@ document.getElementById('matchForm').onsubmit = (e) => {
   });
 };
 
-// Área de Acesso / Admin
+// Área de Acesso / Administração
 document.getElementById('volunteerEnter').onclick = () => {
-  showToast('Modo voluntário ativado. Você pode navegar pelos cadastros!');
+  showToast('Modo voluntário ativado!');
   switchTab('home');
 };
 
@@ -339,7 +721,7 @@ document.getElementById('logout').onclick = () => {
   showToast('Sessão encerrada.');
 };
 
-// Cadastro e Edição de Animais
+// Cadastro / Edição Admin
 document.getElementById('animalForm').onsubmit = (e) => {
   e.preventDefault();
 
@@ -379,7 +761,7 @@ document.getElementById('animalForm').onsubmit = (e) => {
     }
 
     saveAnimals(animals);
-    showToast('Animal salvo com sucesso!');
+    showToast('Animal salvo no catálogo!');
     document.getElementById('animalForm').reset();
     document.getElementById('animalId').value = '';
     renderCatalogs();
@@ -482,16 +864,16 @@ function renderLeadsList() {
   });
 }
 
-// Backup JSON (Exportar / Importar)
+// Backup JSON
 document.getElementById('exportData').onclick = () => {
   const dataStr = JSON.stringify(getAnimals(), null, 2);
   const blob = new Blob([dataStr], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `pacotinhos_backup_${new Date().toISOString().slice(0,10)}.json`;
+  a.download = `pacotinhos_portfolio_backup_${new Date().toISOString().slice(0,10)}.json`;
   a.click();
-  showToast('Backup exportado com sucesso!');
+  showToast('Backup do portfólio baixado!');
 };
 
 document.getElementById('importData').onchange = (e) => {
@@ -508,16 +890,16 @@ document.getElementById('importData').onchange = (e) => {
         renderAdminList();
         showToast('Dados importados com sucesso!');
       } else {
-        alert('Formato de arquivo inválido.');
+        alert('Formato de arquivo JSON inválido.');
       }
     } catch (err) {
-      alert('Erro ao carregar o arquivo JSON.');
+      alert('Erro ao carregar arquivo de backup.');
     }
   };
   reader.readAsText(file);
 };
 
-// Notificações Toast
+// Toast de Notificação
 function showToast(message) {
   const toast = document.getElementById('toast');
   toast.textContent = message;
@@ -525,5 +907,5 @@ function showToast(message) {
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// Inicialização da Aplicação
+// Inicializar aplicativo
 renderCatalogs();
